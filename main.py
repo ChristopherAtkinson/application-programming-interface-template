@@ -39,7 +39,7 @@ async def read_root():
         dict: A dictionary containing a welcome message, API version, and available routers.
     """
     return {
-        "message": "Hello World",
+        "message": "Welcome to the Python REST API",
         "version": "1.0.0",
         "routers": {route.name: route.path for route in app.routes[4:] if route.path != "/"}
     }

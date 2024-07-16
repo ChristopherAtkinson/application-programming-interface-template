@@ -48,7 +48,7 @@ def test_read_root_valid_request_correct_response():
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == {
-        "message": "Hello World",
+        "message": "Welcome to the Python REST API",
         "version": "1.0.0",
         "routers": {route.name: route.path for route in app.routes[4:] if route.path != "/"}
     }
