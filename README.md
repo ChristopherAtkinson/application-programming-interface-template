@@ -93,7 +93,11 @@ This documentation includes detailed information about endpoints, request/respon
 
 ## Continuous Integration & Continuous Deployment
 
+This application includes some general GitHub actions and workflows for continuous integration & continuous deployment.
 
+| Workflow (filename)                                                          | Description                                                                                                                                                      |
+|:-----------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `static_code_analysis_pylint_python_source_validates_coding_standards.yaml`  | Uses Pylint to perform static code analysis on Python source code, ensuring adherence to coding standards and identifying potential errors and style violations. |
 
 ## License
 
