@@ -97,6 +97,7 @@ This application includes some general GitHub actions and workflows for continuo
 
 | Workflow (filename)                                                         | Description                                                                                                                                                      |
 |:----------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `run_coverage_on_pytest_check_test_coverage_minimum_90_percent.yaml`        | Executes coverage to ensure test coverage meets a minimum threshold of 90%, validating comprehensive testing of Python code.                                     |
 | `run_pytest_python_source_unit_tests_ensures_correct_behavior.yaml`         | Executes pytest on Python source code, running unit tests to verify expected behaviors and ensure code functionality correctness.                                |
 | `static_code_analysis_pylint_python_source_validates_coding_standards.yaml` | Uses Pylint to perform static code analysis on Python source code, ensuring adherence to coding standards and identifying potential errors and style violations. |
 
