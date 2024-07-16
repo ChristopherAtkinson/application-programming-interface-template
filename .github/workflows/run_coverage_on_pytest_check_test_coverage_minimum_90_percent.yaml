@@ -1,0 +1,40 @@
+name: Run Coverage Code Analysis On Source Code
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run Coverage Code Analysis
+      run: |
+        coverage run -m pytest
+        coverage report -m
+    - name: Validate Coverage Percentage
+      run: |
+        COVERAGE=$(coverage report -m | awk 'END { print int($4) }')
+        echo "Overall coverage percentage: $COVERAGE%"
+        if [ "$COVERAGE" -lt 90 ]; then
+          echo "Coverage is below 90%."
+          exit 1  # Exit with a non-zero code to indicate failure
+        else
+          echo "Coverage is 90% or above."
+        fi
