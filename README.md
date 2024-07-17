@@ -49,7 +49,7 @@ FastAPI uses a standard for building Python web frameworks and servers called AS
 This application is using the recommended uvicorn module, this is the one that comes by default in the fastapi command.
 
 ```console
-$ uvicorn root:app --host 0.0.0.0 --port 8000 --reload
+$ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 INFO:     Will watch for changes in these directories: ['/home/user/code/awesomeapp']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
