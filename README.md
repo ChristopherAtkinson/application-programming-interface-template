@@ -8,11 +8,11 @@ Welcome to the Python REST API Template repository! This template is designed to
 ## Cloning Repository
 
 ```console
-$ git clone https://link-to-project
+$ git clone https://github.com/ChristopherAtkinson/application-programming-interface-template.git
 ```
 
 ```console
-$ cd my-project
+$ cd application-programming-interface-template
 ```
 
 ## Environment Variables
